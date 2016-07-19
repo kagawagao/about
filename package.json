@@ -1,7 +1,7 @@
 {
-  "name": "about",
+  "name": "About",
   "version": "1.0.0",
-  "description": "everything about me",
+  "description": "Everything about me",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -76,20 +76,14 @@
     }
   },
   "dependencies": {
-    "chartist": "^0.9.8",
     "is-plain-obj": "^1.1.0",
     "nd-browser": "^3.0.0",
     "nd-datetime": "^3.0.5",
     "nd-promise": "^3.0.2",
-    "plato-components": "^0.0.0",
-    "plato-i18n": "^0.0.1",
     "plato-request": "^0.0.1",
-    "plato-styles": "^0.0.0",
-    "plato-validator": "^0.0.3",
     "querystring": "^0.2.0",
     "string-template": "^1.0.0",
     "vue": "^1.0.26",
-    "vue-router": "^0.7.13",
     "vuex": "^2.0.0-rc.3",
     "vuex-localstorage": "^0.2.0",
     "vuex-promise": "^2.0.0-rc.1",

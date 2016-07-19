@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import VAbout from 'views/about.vue'
+import App from 'app.vue'
 
-describe('about.vue', () => {
+describe('app.vue', () => {
   let el
 
   beforeEach(() => {
@@ -17,13 +17,13 @@ describe('about.vue', () => {
     const vm = new Vue({
       el,
       replace: false,
-      template: '<v-about></v-about>',
+      template: '<app></app>',
       components: {
-        VAbout
+        App
       }
     })
 
     expect(vm.$children.length).to.equal(1)
-    expect(vm.$children[0].$children[0].$el.textContent).to.equal('About')
+    expect(vm.$children[0].$el.localName).to.equal('div')
   })
 })
