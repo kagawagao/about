@@ -1,5 +1,5 @@
 html {
-  font: 1em/1.5 Tahoma, Arial, Helvetica, "Microsoft YaHei", "宋体", sans-serif;
+  font: 1em/1.5 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
 }
 
 body {
@@ -17,7 +17,7 @@ ul, ol, th, td, button, textarea, input {
 }
 
 input, textarea, keygen, select, button {
-  font: 1rem/1.5 Tahoma, Arial, Helvetica, "Microsoft YaHei", "宋体", sans-serif;
+  font: 1rem/1.5 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
   color: color(black lightness(20%));
 }
 
