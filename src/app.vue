@@ -3,7 +3,15 @@
     <!-- <avatar :email="profile.email"></avatar> -->
     <sidebar :profile="profile"></sidebar>
     <div class="main">
-      主区域
+      <div class＝"section">
+        <h2>工作经历</h2>
+      </div>
+      <div class="section">
+        <h2>项目</h2>
+      </div>
+      <div class="section">
+        <h2>教育背景</h2>
+      </div>
     </div>
   </div>
 </template>

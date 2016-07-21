@@ -44,7 +44,6 @@ const config = {
     'plato-request',
     'querystring',
     'vue',
-    'vue-router',
     'vuex',
     'vuex-localstorage',
     'vuex-promise',
