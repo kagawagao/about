@@ -3,13 +3,13 @@
     <!-- <avatar :email="profile.email"></avatar> -->
     <sidebar :profile="profile"></sidebar>
     <div class="main">
-      <div class＝"section">
+      <div class="main-item">
         <h2>工作经历</h2>
       </div>
-      <div class="section">
+      <div class="main-item">
         <h2>项目</h2>
       </div>
-      <div class="section">
+      <div class="main-item">
         <h2>教育背景</h2>
       </div>
     </div>
