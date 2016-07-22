@@ -19,7 +19,7 @@
 <script>
 import store from 'vx/store'
 import profile from 'utils/profile'
-// import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 // import { routes } from 'routes'
 
 import Avatar from 'components/avatar'
@@ -39,11 +39,13 @@ export default {
     return { profile }
   },
   computed: {
-    // ...mapGetters(['lang', 'i18n', 'progress', 'toasts'])
+    ...mapGetters(['repos'])
   },
-
+  created () {
+    this.getRepos()
+  },
   methods: {
-    // ...mapActions(['setEnv'])
+    ...mapActions(['getRepos'])
   },
   components: {
     Avatar,

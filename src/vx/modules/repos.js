@@ -2,17 +2,17 @@ import createPersist from 'vuex-localstorage'
 import request from 'plato-request'
 
 import {
-  GET_COMMITS
+  GET_REPOS
 } from '../types'
 
 import {
-  COMMIT_KEY,
+  REPOS_KEY,
   ONE_MINUTE,
   PROMISE_SUCCESS
 } from '../constants'
 
-const persist = createPersist(COMMIT_KEY, {
-  commits: null
+const persist = createPersist(REPOS_KEY, {
+  repos: null
 }, {
   expires: ONE_MINUTE
 })
@@ -20,29 +20,30 @@ const persist = createPersist(COMMIT_KEY, {
 const state = persist.get()
 
 const getters = {
-  commits: state => state.commits
+  repos: state => state.repos || {}
 }
 
 const actions = {
-  getCommits ({ commit }, payload) {
-    commit(GET_COMMITS, request('{base}/commits?sha=', {
+  getRepos ({ commit }, payload) {
+    commit(GET_REPOS, request('{base}', {
       params: {
-        base: 'https://api.github.com/repos/crossjs/plato'
+        base: 'https://api.github.com/user/repos'
       },
       query: {
-        per_page: 3
+        type: 'owner'
       },
       headers: {
-        'Accept': 'application/vnd.github.v3+json'
+        'Accept': 'application/vnd.github.v3+json',
+        'Authorization': 'token 97521d6208ff758d8131be99dfdbc6e2e85bacc6'
       }
     }))
   }
 }
 
 const mutations = {
-  [GET_COMMITS] (state, { payload, meta }) {
+  [GET_REPOS] (state, { payload, meta }) {
     if (meta === PROMISE_SUCCESS) {
-      state.commits = payload
+      state.repos = payload
       persist.set(state)
     }
   }

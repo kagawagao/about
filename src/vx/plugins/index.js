@@ -16,26 +16,7 @@ const plugins = [
       FAILURE: PROMISE_FAILURE
     },
     silent: false
-  }),
-  store => {
-    // 实现进度条、错误提示
-    store.subscribe(({ meta, payload }) => {
-      switch (meta) {
-        case PROMISE_PENDING:
-          store.dispatch('setProgress', 60)
-          break
-        case PROMISE_SUCCESS:
-          store.dispatch('setProgress', 100)
-          break
-        case PROMISE_FAILURE:
-          store.dispatch('setProgress', 100)
-          store.dispatch('addToast', payload)
-          break
-        default:
-          // setProgress(0)
-      }
-    })
-  }
+  })
 ]
 
 if (__DEV__) {

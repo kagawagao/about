@@ -1,5 +1,5 @@
 export const ENV_KEY = 'ENV_KEY'
-export const COMMIT_KEY = 'COMMIT_KEY'
+export const REPOS_KEY = 'REPOS_KEY'
 
 // one minute
 export const ONE_MINUTE = 60 * 1e3
