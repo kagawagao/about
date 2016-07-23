@@ -20,21 +20,17 @@ const persist = createPersist(REPOS_KEY, {
 const state = persist.get()
 
 const getters = {
-  repos: state => state.repos || {}
+  repos: state => state.repos || []
 }
 
 const actions = {
   getRepos ({ commit }, payload) {
     commit(GET_REPOS, request('{base}', {
       params: {
-        base: 'https://api.github.com/user/repos'
-      },
-      query: {
-        type: 'owner'
+        base: 'https://api.github.com/users/kagawagao/repos'
       },
       headers: {
-        'Accept': 'application/vnd.github.v3+json',
-        'Authorization': 'token 97521d6208ff758d8131be99dfdbc6e2e85bacc6'
+        'Accept': 'application/vnd.github.v3+json'
       }
     }))
   }

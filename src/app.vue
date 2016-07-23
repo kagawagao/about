@@ -3,15 +3,9 @@
     <!-- <avatar :email="profile.email"></avatar> -->
     <sidebar :profile="profile"></sidebar>
     <div class="main">
-      <div class="main-item">
-        <h2>工作经历</h2>
-      </div>
-      <div class="main-item">
-        <h2>项目</h2>
-      </div>
-      <div class="main-item">
-        <h2>教育背景</h2>
-      </div>
+      <project></project>
+      <experience></experience>
+      <education></education>
     </div>
   </div>
 </template>
@@ -20,21 +14,16 @@
 import store from 'vx/store'
 import profile from 'utils/profile'
 import { mapGetters, mapActions } from 'vuex'
-// import { routes } from 'routes'
 
 import Avatar from 'components/avatar'
 import Sidebar from 'components/sidebar'
+import Project from 'components/project'
+import Education from 'components/education'
+import Experience from 'components/experience'
 
 export default {
   name: 'App',
   store,
-  // i18n: {
-  //   // 翻译资源库
-  //   // 覆盖上级（或全局）
-  //   data () {
-  //     return {}
-  //   }
-  // },
   data () {
     return { profile }
   },
@@ -49,7 +38,10 @@ export default {
   },
   components: {
     Avatar,
-    Sidebar
+    Sidebar,
+    Project,
+    Education,
+    Experience
   }
 }
 
