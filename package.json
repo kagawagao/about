@@ -84,7 +84,7 @@
     "plato-request": "^0.1.0",
     "querystring": "^0.2.0",
     "string-template": "^1.0.0",
-    "vue": "^1.0.26",
+    "vue": "^2.0.2",
     "vuex": "^2.0.0-rc.3",
     "vuex-localstorage": "^0.2.0",
     "vuex-promise": "^2.0.0-rc.1",
