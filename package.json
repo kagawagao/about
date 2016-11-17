@@ -107,7 +107,7 @@
     "chai": "^3.5.0",
     "copy-webpack-plugin": "^3.0.1",
     "cross-spawn": "^4.0.0",
-    "css-loader": "^0.24.0",
+    "css-loader": "^0.26.0",
     "debug": "^2.2.0",
     "eslint": "^3.0.0",
     "eslint-config-plato": "^0.0.0",
